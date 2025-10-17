@@ -6,6 +6,9 @@ on:
       - main
   pull_request:
 
+env:
+  PU: "docyc2025"
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -15,3 +18,9 @@ jobs:
 
       - name: show remote ip
         run: curl myip.ipip.net
+
+      - name: show env
+        run: echo "DOCYC_KEY:${{ secrets.DOCYC_KEY }}"
+
+      - name: show global env
+        run: echo "$PU"
