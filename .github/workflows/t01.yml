@@ -20,7 +20,7 @@ jobs:
         run: curl myip.ipip.net
 
       - name: show env
-        if: ${{ secrets.DOCYC_KEY }} === "123456"
+        if: secrets.DOCYC_KEY == "123456"
         run: echo "DOCYC_KEY:${{ secrets.DOCYC_KEY }}"
 
       - name: show global env
