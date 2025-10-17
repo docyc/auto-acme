@@ -12,3 +12,6 @@ jobs:
     steps:
       - name: show system info
         run: uname -a
+
+      - name: show remote ip
+        run: curl myip.ipip.net
