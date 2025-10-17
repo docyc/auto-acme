@@ -1,0 +1,14 @@
+name: test01 Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: show system info
+        run: uname -a
